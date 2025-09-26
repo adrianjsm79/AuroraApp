@@ -1,4 +1,4 @@
-package com.aurora.ui.recovery
+package com.tecsup.aurora.RecoveryScreens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -9,6 +9,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -32,7 +33,15 @@ fun RecoveryMethodScreen() {
             .padding(24.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-
+        // ✅ Fix: estilo con brush
+        Text(
+            text = "Aurora",
+            style = TextStyle(
+                brush = AuroraGradient,
+                fontSize = 36.sp,
+                fontWeight = FontWeight.Bold
+            )
+        )
         Spacer(Modifier.height(8.dp))
         Text("Sistema de localización de celulares", color = Color.Gray, fontSize = 14.sp)
 
@@ -62,6 +71,11 @@ fun RecoveryMethodScreen() {
                     border = ButtonDefaults.outlinedButtonBorder.copy(width = 1.dp, brush = AuroraGradient)
                 ) { Text("Correo", color = Color.White) }
 
+                Text(
+                    "Enviaremos un codigo a +51 947179270",
+                    color = Color.LightGray, textAlign = TextAlign.Center, fontSize = 14.sp
+                )
+
                 Spacer(Modifier.height(16.dp))
                 Button(
                     onClick = { },
@@ -73,6 +87,8 @@ fun RecoveryMethodScreen() {
     }
 }
 
+
+
 @Composable
 fun RecoveryCodeScreen() {
     Column(
@@ -82,7 +98,15 @@ fun RecoveryCodeScreen() {
             .padding(24.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-
+        // ✅ Fix: estilo con brush
+        Text(
+            text = "Aurora",
+            style = TextStyle(
+                brush = AuroraGradient,
+                fontSize = 36.sp,
+                fontWeight = FontWeight.Bold
+            )
+        )
         Spacer(Modifier.height(8.dp))
         Text("Sistema de localización de celulares", color = Color.Gray, fontSize = 14.sp)
 
@@ -96,8 +120,10 @@ fun RecoveryCodeScreen() {
             modifier = Modifier.fillMaxWidth()
         ) {
             Column(Modifier.padding(16.dp), horizontalAlignment = Alignment.CenterHorizontally) {
-                Text("Enviamos un código de recuperación a tu correo o teléfono",
-                    color = Color.LightGray, textAlign = TextAlign.Center, fontSize = 14.sp)
+                Text(
+                    "Enviamos un código de recuperación a tu correo o teléfono",
+                    color = Color.LightGray, textAlign = TextAlign.Center, fontSize = 14.sp
+                )
 
                 Spacer(Modifier.height(8.dp))
                 Text("Enviado a: juanitope@gmail.com", color = Color.White, fontSize = 14.sp)
@@ -105,7 +131,9 @@ fun RecoveryCodeScreen() {
                 Spacer(Modifier.height(24.dp))
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     repeat(4) {
-                        OutlinedTextField(value = "", onValueChange = { },
+                        OutlinedTextField(
+                            value = "",
+                            onValueChange = { },
                             modifier = Modifier.width(50.dp),
                             singleLine = true
                         )
@@ -135,7 +163,15 @@ fun RecoveryNewPasswordScreen() {
             .padding(24.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-
+        // ✅ Fix: estilo con brush
+        Text(
+            text = "Aurora",
+            style = TextStyle(
+                brush = AuroraGradient,
+                fontSize = 36.sp,
+                fontWeight = FontWeight.Bold
+            )
+        )
         Spacer(Modifier.height(8.dp))
         Text("Sistema de localización de celulares", color = Color.Gray, fontSize = 14.sp)
 
@@ -168,7 +204,7 @@ fun RecoveryNewPasswordScreen() {
     }
 }
 
-//// ---- Previews ----
+//// ---- 🎨 Previews ----
 
 @Preview(showBackground = true)
 @Composable
