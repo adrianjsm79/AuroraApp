@@ -168,7 +168,7 @@ fun RecoveryNewPasswordScreen() {
     }
 }
 
-//// ---- 🎨 Previews ----
+//// ---- Previews ----
 
 @Preview(showBackground = true)
 @Composable

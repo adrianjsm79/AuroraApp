@@ -44,7 +44,8 @@ fun RegisterScreen() {
     val gradient = Brush.horizontalGradient(
         colors = listOf(Color(0xFF00F5FF), Color(0xFF9C27B0))
     )
-
+///asd
+    
     Column(
         modifier = Modifier
             .fillMaxSize()
